@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:studentn/screens/auth/activation_page.dart';
 import 'package:studentn/screens/home_view.dart';
 
 main() {
@@ -26,8 +27,8 @@ class _QuizAppStudentState extends State<QuizAppStudent> {
   Widget build(BuildContext context) {
     controlUserLogin();
     return MaterialApp(debugShowCheckedModeBanner: false,
-      // home: (isLogin == false) ? ActivationPage() : HomePage(),
-      home: HomePage(),
+      home: (isLogin == false) ? ActivationPage() : HomePage(),
+      // home: HomePage(),
     );
   }
 
